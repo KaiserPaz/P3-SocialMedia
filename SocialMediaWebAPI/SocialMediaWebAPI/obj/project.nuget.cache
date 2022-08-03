@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TJLaNzCdD14aGYIKlBnDfQWLVWRNPVaxynnYHzVKLiCpvh5vZaLZkKsX8aQeJo94+E0pakDnU7XR0fA+62k/Mw==",
+  "dgSpecHash": "rIlKixwu7BRIA5YNhEhmO6v1uO8DGiniKumOoFTjhlsFWws3O2YHJPxp+N9nTgn5weByZLL5zGRSomRdHmGcrQ==",
   "success": true,
-  "projectFilePath": "D:\\OneDrive\\Work\\Group Project\\SocialMediaWebAPI\\SocialMediaWebAPI\\SocialMediaWebAPI.csproj",
+  "projectFilePath": "D:\\OneDrive\\Work\\Group Project\\P3-SocialMedia\\SocialMediaWebAPI\\SocialMediaWebAPI\\SocialMediaWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erics\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\erics\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -59,3 +59,13 @@ D:\OneDrive\Work\Group Project\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net
 D:\OneDrive\Work\Group Project\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.pdb
 D:\OneDrive\Work\Group Project\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.genruntimeconfig.cache
 D:\OneDrive\Work\Group Project\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\ref\SocialMediaWebAPI.dll
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.csproj.AssemblyReference.cache
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.AssemblyInfoInputs.cache
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.AssemblyInfo.cs
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.csproj.CoreCompileInputs.cache
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.dll
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\refint\SocialMediaWebAPI.dll
+D:\OneDrive\Work\Group Project\P3-SocialMedia\SocialMediaWebAPI\SocialMediaWebAPI\obj\Debug\net6.0\SocialMediaWebAPI.pdb
