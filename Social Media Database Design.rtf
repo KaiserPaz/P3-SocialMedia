@@ -11,7 +11,7 @@ user Table:\
 	userId int identity, -PK\
 	firstName varchar(40),\
 	lastName varchar(40),\
-	mobilePhone (double), -UNK Key\
+	mobilePhone varchar(10), -UNK Key\
 	email varchar (50), -UNK Key\
 	userName varchar(20), -UNK Key\
 	password varchar(15),\
@@ -23,8 +23,7 @@ user Table:\
 \
 user_Post Table:\
 	id int identity (1000,1), PK\
-	userId int,\
-	senderId int,\
+	userId int FK,\
 	message varchar(500)\
 	createdAt DATETIME,\
 	updatedAt DATETIME,\
