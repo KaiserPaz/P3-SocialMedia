@@ -1,45 +1,4 @@
-/* Template: Tivo - SaaS App HTML Landing Page Template
-   Author: Inovatik
-   Created: Sep 2019
-   Description: Master CSS file
-*/
 
-/*****************************************
-Table Of Contents:
-
-01. General Styles
-02. Preloader
-03. Navigation
-04. Header
-05. Customers
-06. Description
-07. Features
-08. Features Lightboxes
-09. Details
-10. Video
-11. Pricing
-12. Testimonials
-13. Newsletter
-14. Footer
-15. Copyright
-16. Back To Top Button
-17. Extra Pages
-18. Sign Up and Log In Pages
-19. Media Queries
-******************************************/
-
-/*****************************************
-Colors:
-- Backgrounds, buttons, bullets, icons - blue #5f4dee
-- Backgrounds, light button, light body text - light gray #f3f7fd
-- Headings text - black #333
-- Body text - dark gray #555
-******************************************/
-
-
-/******************************/
-/*     01. General Styles     */
-/******************************/
 body,
 html {
     width: 100%;
