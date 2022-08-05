@@ -5,7 +5,7 @@
   overflow: hidden;
   list-style: none;
   padding: 0;
-  /* Fix of Webkit flickering */
+
   z-index: 1;
 }
 .swiper-container-no-flexbox .swiper-slide {
@@ -134,7 +134,7 @@
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
-/* IE10 Windows Phone 8 Fixes */
+
 .swiper-container-wp8-horizontal,
 .swiper-container-wp8-horizontal > .swiper-wrapper {
   -ms-touch-action: pan-y;
@@ -603,6 +603,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 .swiper-container-coverflow .swiper-wrapper {
-  /* Windows 8 IE 10 fix */
+
+
   -ms-perspective: 1200px;
 }
