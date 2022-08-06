@@ -32,7 +32,7 @@ namespace SocialMediaWebAPI.Models.EF
         #region AddNewPost
         public string AddNewPost(Post newPost)
         {
-            SqlCommand cmd = new SqlCommand("insert into Post (userId, message, createdAt, updatedAt, image) values (@p_userId,@p_message,@p_createdAt,@p_updatedAt,@p_image)", con);
+            SqlCommand cmd = new SqlCommand("insert into Post values (@p_userId,@p_message,@p_createdAt,@p_updatedAt,@p_image)", con);
             cmd.Parameters.AddWithValue("@p_userId", newPost.UserId);
             cmd.Parameters.AddWithValue("@p_message", newPost.Message);
             cmd.Parameters.AddWithValue("@p_createdAt", newPost.CreatedAt);
@@ -100,6 +100,7 @@ namespace SocialMediaWebAPI.Models.EF
 
             return postByuserId;
         }
-        #endregion 
+        #endregion
+
     }
 }

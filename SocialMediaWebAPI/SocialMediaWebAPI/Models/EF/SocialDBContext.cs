@@ -26,14 +26,7 @@ namespace SocialMediaWebAPI.Models.EF
         {
             if (!optionsBuilder.IsConfigured)
             {
-                if (!optionsBuilder.IsConfigured)
-                {
-                    var configuration = new ConfigurationBuilder()
-                    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                    .AddJsonFile("appsettings.json")
-                    .Build();
-                    optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
-                }
+                optionsBuilder.UseSqlServer("Server=tcp:nikhils-p2.database.windows.net,1433;Initial Catalog=SocialDB;Persist Security Info=False;User ID=trainer;Password=Password@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -46,7 +39,7 @@ namespace SocialMediaWebAPI.Models.EF
                 entity.Property(e => e.CommentId).HasColumnName("commentId");
 
                 entity.Property(e => e.Comment1)
-                    .HasMaxLength(500)
+                    .HasMaxLength(5000)
                     .IsUnicode(false)
                     .HasColumnName("comment");
 
@@ -65,10 +58,17 @@ namespace SocialMediaWebAPI.Models.EF
                     .HasColumnType("datetime")
                     .HasColumnName("updatedAt");
 
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
                 entity.HasOne(d => d.Post)
                     .WithMany(p => p.Comments)
                     .HasForeignKey(d => d.PostId)
-                    .HasConstraintName("fk_postId");
+                    .HasConstraintName("fk_postId_comment");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Comments)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("fk_userId_comment");
             });
 
             modelBuilder.Entity<ParentChildComment>(entity =>
@@ -84,12 +84,12 @@ namespace SocialMediaWebAPI.Models.EF
                 entity.HasOne(d => d.ChildComment)
                     .WithMany()
                     .HasForeignKey(d => d.ChildCommentId)
-                    .HasConstraintName("fk_chiCommId");
+                    .HasConstraintName("fk_child_CommentId");
 
                 entity.HasOne(d => d.ParentComment)
                     .WithMany()
                     .HasForeignKey(d => d.ParentCommentId)
-                    .HasConstraintName("fk_parCommId");
+                    .HasConstraintName("fk_parent_CommentId");
             });
 
             modelBuilder.Entity<Post>(entity =>
@@ -120,14 +120,21 @@ namespace SocialMediaWebAPI.Models.EF
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Post__userId__71D1E811");
+                    .HasConstraintName("fk_userId_post");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.Property(e => e.UserId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("userId");
+                entity.HasIndex(e => e.Email, "uk_email")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.MobilePhone, "uk_mobilePhone")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.UserName, "uk_userName")
+                    .IsUnique();
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(50)
@@ -187,9 +194,7 @@ namespace SocialMediaWebAPI.Models.EF
             {
                 entity.ToTable("user_Friend");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -208,10 +213,15 @@ namespace SocialMediaWebAPI.Models.EF
 
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
+                entity.HasOne(d => d.Friend)
+                    .WithMany(p => p.UserFriendFriends)
+                    .HasForeignKey(d => d.FriendId)
+                    .HasConstraintName("fk_friendId_friend");
+
                 entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserFriends)
+                    .WithMany(p => p.UserFriendUsers)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__user_Frie__userI__7D439ABD");
+                    .HasConstraintName("fk_userId_friend");
             });
 
             OnModelCreatingPartial(modelBuilder);

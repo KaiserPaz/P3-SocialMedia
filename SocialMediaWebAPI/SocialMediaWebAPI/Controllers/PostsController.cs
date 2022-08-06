@@ -138,7 +138,7 @@ namespace SocialMediaWebAPI.Controllers
             await _context.SaveChangesAsync();
 
             //updated to have new object name
-            return CreatedAtAction("GetPost", new { id = newPost.Id }, newPost);
+            return CreatedAtAction("GetPosts", newPost);
         }
         #endregion
 

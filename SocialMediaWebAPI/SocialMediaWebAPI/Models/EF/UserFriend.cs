@@ -12,6 +12,7 @@ namespace SocialMediaWebAPI.Models.EF
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
+        public virtual User? Friend { get; set; }
         public virtual User? User { get; set; }
     }
 }
