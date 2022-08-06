@@ -101,7 +101,5 @@ namespace SocialMediaWebAPI.Models.EF
             return postByuserId;
         }
         #endregion 
-
-       
     }
 }

@@ -39,17 +39,26 @@ namespace SocialMediaWebAPI.Controllers
             return comment;
         }
 
-        // PUT: api/Comments/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutComment(int id, Comment comment)
+        #region PATCH: api/Comments/1000/{updated comment goes here} <- this method updates only commentId, comment, and updatedAt - all else remain the same
+        //PATCH: api/Comments/1000/{updated comment goes here}
+        [HttpPatch("{commentId}/{comment}")]
+        public async Task<IActionResult> UpdateComment(int commentId, string comment)
         {
-            if (id != comment.CommentId)
+            var existing = await _context.Comments.FindAsync(commentId);
+
+            if (existing == null)
+            {
+                return NotFound();
+            }
+            if (commentId != existing.CommentId)
             {
                 return BadRequest();
             }
+            existing.CommentId = commentId;
+            existing.Comment1 = comment;
+            existing.UpdatedAt = DateTime.Now;
 
-            _context.Entry(comment).State = EntityState.Modified;
+            _context.Entry(existing).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +66,7 @@ namespace SocialMediaWebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CommentExists(id))
+                if (!CommentExists(commentId))
                 {
                     return NotFound();
                 }
@@ -69,6 +78,38 @@ namespace SocialMediaWebAPI.Controllers
 
             return NoContent();
         }
+        #endregion
+
+        //// PUT: api/Comments/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutComment(int id, Comment comment)
+        //{
+        //    if (id != comment.CommentId)
+        //    {
+        //        return BadRequest();
+        //    }
+
+        //    _context.Entry(comment).State = EntityState.Modified;
+
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!CommentExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return NoContent();
+        //}
 
         // POST: api/Comments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
