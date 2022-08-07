@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww17800\viewh12100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Social Media Database Design\
+\
+user Table:\
+	userId int identity, -PK\
+	firstName varchar(40),\
+	lastName varchar(40),\
+	mobilePhone varchar(10), -UNK Key\
+	email varchar (50), -UNK Key\
+	userName varchar(20), -UNK Key\
+	password varchar(15),\
+	registeredAt DATETIME, (like to have)\
+	lastLogin DATETIME, (like to have)\
+	intro varchar (100), \
+	profile varchar(500),\
+	profilePicture varchar (1000)\
+\
+user_Post Table:\
+	id int identity (1000,1), PK\
+	userId int FK,\
+	message varchar(500)\
+	createdAt DATETIME,\
+	updatedAt DATETIME,\
+\
+user_Comment Table\
+	commentId int identity (100,1), PK\
+	comment varchar (500),\
+	createdAt DATETIME,\
+	updatedAt DATETIME,\
+	postId int FK\
+\
+parent_child_Comment Table:\
+	parent_CommentId int, FK\
+	child_CommentId int FK\
+\
+\
+Possible Table\
+user_Friend Table:\
+	id int, - PK\
+	userId int, FK (userID)\
+	friendId int,\
+	status varchar (30), (blocked, Accepted, Pending) - //Possible\
+	createdAt DATETIME,\
+	updatedAt DATETIME,\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+}

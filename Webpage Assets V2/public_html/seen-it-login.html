@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Seen-It Login</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-all.css" rel="stylesheet">
+    <link href="assets/css/swiper.css" rel="stylesheet">
+	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+	<link href="assets/css/seenit.css" rel="stylesheet">
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <nav class="navbar navbar-dark bg-black navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/seen-it-logo.png" alt="" class="brand-img"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a> <!-- asp Controllers can ALSO go here - Jacob Linao -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a> <!-- asp Controllers can ALSO go here - Jacob Linao -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a> <!-- asp Controllers can ALSO go here - Jacob Linao -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Seen-It Posts</a> <!-- asp Controllers can ALSO go here - Jacob Linao -->
+                    </li>
+                    <li class="nav-item ml-0 ml-lg-4">
+                        <a class="nav-link btn btn-primary" href="seen-it-sign-up.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header" class="ex-2-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Log In</h1>
+                   <p>You don't have a password? <a class="white" href="seen-it-sign-up.html">Sign Up</a></p> 
+                    <div class="form-container">
+                        <form id="logInForm" data-toggle="validator" data-focus="false">
+                            <div class="form-group">
+                                <input type="email" class="form-control-input" id="lemail" required>
+                                <div class="help-block with-errors">
+                                    <ul class="list-unstyled">
+                                        Seen-It Email 
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-input" id="lpassword" required>
+                                <div class="help-block with-errors">
+                                    <ul class="list-unstyled">
+                                        Seen-It Password
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">LOG IN</button>
+                            </div>
+                            <div class="form-message">
+                                <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
+                        </form>
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+    </header>
+
+    <script src="assets/jacobreferences/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/jacobreferences/bootstrap/bootstrap.js"></script>
+    <script src="assets/jacobreferences/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> 
+    <script src="assets/js/jquery.easing.min.js"></script> 
+    <script src="assets/js/validator.min.js"></script> 
+</body>
+</html>

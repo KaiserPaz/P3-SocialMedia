@@ -1,0 +1,207 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <SpaProxyServerUrl>https://localhost:44467</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+    <RootNamespace>SocialMediaAppCore_Angular</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f3240bf6-4c58-4185-8093-19de5c6e788e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngularJS.Core" Version="1.8.2" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\counter\**" />
+    <Compile Remove="ClientApp\src\app\fetch-data\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\counter\**" />
+    <Content Remove="ClientApp\src\app\fetch-data\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\counter\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\fetch-data\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\counter\**" />
+    <None Remove="ClientApp\src\app\fetch-data\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\counter\counter.component.html" />
+    <None Remove="ClientApp\src\app\counter\counter.component.spec.ts" />
+    <None Remove="ClientApp\src\app\counter\counter.component.ts" />
+    <None Remove="ClientApp\src\app\fetch-data\fetch-data.component.html" />
+    <None Remove="ClientApp\src\app\fetch-data\fetch-data.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\imgs\jacoblogo.svg" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.affix.js" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.bundle.js" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.js" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.js.map" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.min.js" />
+    <None Include="wwwroot\jacobreferences\bootstrap\bootstrap.min.js.map" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.js" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.min.js" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.min.map" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.slim.js" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.slim.min.js" />
+    <None Include="wwwroot\jacobreferences\jquery\jquery-3.4.1.slim.min.map" />
+    <None Include="wwwroot\jacobreferences\owl-carousel\js\owl.carousel.js" />
+    <None Include="wwwroot\jacobreferences\owl-carousel\js\owl.carousel.min.js" />
+    <None Include="wwwroot\jacobreferences\themify-icons\fonts\themify.svg" />
+    <None Include="wwwroot\js\seenit.js" />
+    <None Include="wwwroot\scss\abstracts\_mixins.scss" />
+    <None Include="wwwroot\scss\abstracts\_variables.scss" />
+    <None Include="wwwroot\scss\base\_typography.scss" />
+    <None Include="wwwroot\scss\components\_breadcrumb.scss" />
+    <None Include="wwwroot\scss\components\_button.scss" />
+    <None Include="wwwroot\scss\components\_card.scss" />
+    <None Include="wwwroot\scss\components\_code.scss" />
+    <None Include="wwwroot\scss\components\_dropdowns.scss" />
+    <None Include="wwwroot\scss\components\_navbar.scss" />
+    <None Include="wwwroot\scss\components\_pagination.scss" />
+    <None Include="wwwroot\scss\layout\_footer.scss" />
+    <None Include="wwwroot\scss\layout\_header.scss" />
+    <None Include="wwwroot\scss\layout\_sections.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_alert.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_background-variant.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_badge.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_border-radius.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_buttons.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_caret.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_clearfix.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_deprecate.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_float.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_forms.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_gradients.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_grid-framework.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_grid.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_hover.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_image.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_list-group.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_lists.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_nav-divider.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_pagination.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_reset-text.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_resize.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_screen-reader.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_size.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_table-row.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_text-emphasis.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_text-hide.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_text-truncate.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_transition.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\mixins\_visibility.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_align.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_background.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_borders.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_clearfix.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_display.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_embed.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_flex.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_float.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_overflow.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_position.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_screenreaders.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_shadows.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_sizing.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_spacing.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_stretched-link.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_text.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\utilities\_visibility.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\vendor\_rfs.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_alert.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_badge.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_breadcrumb.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_button-group.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_buttons.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_card.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_carousel.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_close.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_code.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_custom-forms.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_dropdown.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_forms.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_functions.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_grid.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_images.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_input-group.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_jumbotron.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_list-group.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_media.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_mixins.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_modal.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_nav.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_navbar.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_pagination.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_popover.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_print.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_progress.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_reboot.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_root.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_spinners.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_tables.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_toasts.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_tooltip.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_transitions.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_type.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_utilities.scss" />
+    <None Include="wwwroot\scss\vendors\bootstrap-4.3.1\_variables.scss" />
+  </ItemGroup>
+
+    <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+  
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>wwwroot\%(RecursiveDir)%(FileName)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>
