@@ -211,15 +211,18 @@ namespace SocialMediaWebAPI.Controllers
 
         // POST: api/Users
         [HttpPost("{userEmail}")]
-        public async Task<ActionResult<User>> PostUser(string userEmail, string UserName)
+        public async Task<ActionResult<User>> PostUser(string userEmail, string UserName, string password, string mobilePhone)
         {
             User newUser = new User();
             newUser.Email = userEmail;
             newUser.UserName = UserName;
+            newUser.Password = password;
+            newUser.MobilePhone = mobilePhone;
+            newUser.RegisteredAt = DateTime.Now;           
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return CreatedAtAction("GetUsers", newUser);
         }
 
         // DELETE: api/Users/5
