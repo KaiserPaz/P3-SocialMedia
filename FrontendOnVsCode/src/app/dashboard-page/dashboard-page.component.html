@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="SocialDB"> 
+    <title> Dashboard </title>
+
+    <!-- the owl carousel theme I "borrowed". Might move somewhere else, idk lol - Jacob Linao -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+	<link rel="stylesheet" href="dashboard-page.component.css">
+
+    <!--script sources and references - Jacob -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+
+
+</head>
+
+<!--THIS IS THE PAGE WHERE OTHER PEOPLE's POST WILL SHOW UP-->
+<!--THIS IS THE PAGE WHERE OTHER PEOPLE's POST WILL SHOW UP-->
+<!--THIS IS THE PAGE WHERE OTHER PEOPLE's POST WILL SHOW UP-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/seen-it-logo.png" alt="" class="brand-img"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/homePage">Home</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/aboutPage">About</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboardPage">Dashboard</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/seenCommentsPage">Seen-It Posts</a>
+                    </li>
+                    <li class="nav-item ml-0 ml-lg-4">
+                        <a class="nav-link btn btn-primary" href="seen-it-login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" id="dashboard">
+        <div class="container">
+            <hr>
+            <h6 class="s-font mb-0">THIS IS WHERE OTHER PEOPLE'S POSTS WILL SHOW UP</h6>
+            <h1 class="section-title pb-4">Dash</h1>
+            <div id="owl-dashboard" class="owl-carousel owl-theme mt-4">
+                <a href="javascript:void(0)" class="item expertises-item">
+                    <img src="assets/imgs/dash-img-4.svg"alt="placeholder bootstrap template" class="box-shadow">
+                    <hr>
+                    <h5 class="name">Shows</h5>
+                    <p class="s-font">No, we have an Aquaman at home...</p>
+                </a> 
+                <a href="javascript:void(0)" class="item expertises-item">
+                    <img src="assets/imgs/dash-img-3.svg"alt="placeholder bootstrap template" class="box-shadow">
+                    <hr>
+                    <h5 class="name">Music</h5>
+                    <p class="s-font">Rare photo of man creating fire for the first time...</p>
+                </a> 
+                <a href="javascript:void(0)" class="item expertises-item">
+                    <img src="assets/imgs/dash-img-5.svg"alt="placeholder bootstrap template" class="box-shadow">
+                    <hr>
+                    <h5 class="name">Funny</h5>
+                    <p class="s-font">Antonio Brown really is the only player with three NFL jerseys on the clearance rack at the same time... </p>
+                </a> 
+                <a href="javascript:void(0)" class="item expertises-item">
+                    <img src="assets/imgs/dash-img-6.svg"alt="placeholder bootstrap template" class="box-shadow">
+                    <hr>
+                    <h5 class="name">Sports</h5>
+                    <p class="s-font">Max Verstappen looks to seal the championship title by the time of the Italian Grand Prix. </p>
+                </a>
+                <a href="javascript:void(0)" class="item expertises-item">
+                    <img src="assets/imgs/dash-img-1.svg"alt="placeholder bootstrap template" class="box-shadow">
+                    <hr>
+                    <h5 class="name">News</h5>
+                    <p class="s-font">Los Angeles Lakers, Lebron James hold 'productive' contract extension talks</p>
+                </a> 
+            </div>             
+        </div>
+    </section>
+
+
+    <section class="section" id="posts">
+        <div class="container">
+            <h6 class="s-font mb-0">THIS IS WHERE YOU MAKE A POST</h6>
+            <h1 class="section-title">Posts</h1>
+            
+            <!---->
+            <div class="container bootdey">
+            <div class="col-sm-12 bootstrap snippets">
+            <div class="panel">
+                <div class="panel-body">
+                    <textarea class="form-control" rows="4" placeholder="Post your Seen-It thoughts..."></textarea>
+                    <div class="mar-top clearfix">
+                        <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+                        <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+                        <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+                        <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        </section>
+  
+            
+
+            
+
+
+    <div class="panel-body">
+    <!-- Seen-It Posts Content -->
+        <div class="media-block">
+            <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="assets/imgs/avatar1.jpg"></a>
+            <div class="media-body">
+                <div class="mar-btm">
+                    <h5 class="name">Jacob T. Linao</h5>
+                </div>
+                <p>This project is a challenge, but I guess it has its fun.Ocassionally. </p>
+                <div class="pad-ver">
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                        <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                    </div>
+                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                </div>
+            <hr>
+          <!-- Comments -->
+
+            <div>
+                <div class="media-block">
+                    <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="assets/imgs/avatar3.jpg"></a>
+                    <div class="media-body">
+                        <div class="mar-btm">
+                            <h5 class="name">Eric Sweeten</h5>
+                        </div>
+                        <p>Lots of things to learn from this project most definitely. So many things to do!</p>
+                        <div class="pad-ver">
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                            </div>
+                            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <!--post partition-->
+                <div class="media-block">
+                    <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="assets/imgs/avatar2.jpg">
+                    </a>
+                    <div class="media-body">
+                        <div class="mar-btm">
+                            <h5 class="name">Diego-Ortiz</h5>
+                        </div>
+                        <p>I am always ready for a new challenge. So far, this project has been giving me a good one, but we'll make it all the way through!</p>
+                        <div class="pad-ver">
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                            </div>
+                            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- End Seen-It comment portion -->
+      <div class="media-block pad-all">
+        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="assets/imgs/avatar1.jpg"></a>
+        <div class="media-body">
+          <div class="mar-btm">
+            <h5 class="name">Jacob T. Linao</h5>
+          </div>
+          <p>Can't wait to celebrate with crab rangoons when this is all over...</p>
+            <div class="btn-group">
+                <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+              </div>
+            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+          </div>
+          <hr>
+          <!-- Comments -->
+
+          <div>
+            <div class="media-block pad-all">
+              <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="assets/imgs/avatar4.jpg"></a>
+              <div class="media-body">
+                <div class="des">
+                  <h5 class="name">Edward Kennedy</h5>
+                </div>
+                <p>This project at least allows me to grow and sharpen the developer skills I have. It's a plus to learn new things...</p>
+                <div>
+                  <div class="btn-group">
+                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                  </div>
+                  <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+</body>
+</html>
