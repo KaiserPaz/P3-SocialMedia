@@ -49,17 +49,27 @@ namespace SocialMediaWebAPI.Controllers
             return userFriend;
         }
 
-        // PUT: api/UserFriends/5
+        // PATCH: api/UserFriends/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserFriend(int id, UserFriend userFriend)
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PutUserFriend(int id, string FriendStatus)
         {
-            if (id != userFriend.Id)
+            var userdata = await _context.UserFriends.FindAsync(id);
+
+            if (userdata == null)
+            {
+                return NotFound();
+            }
+            if (id != userdata.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(userFriend).State = EntityState.Modified;
+            userdata.Id = id;
+            userdata.FriendStatus = FriendStatus;
+            userdata.UpdatedAt = DateTime.Now;
+
+            _context.Entry(userdata).State = EntityState.Modified;
 
             try
             {
@@ -89,6 +99,8 @@ namespace SocialMediaWebAPI.Controllers
           {
               return Problem("Entity set 'SocialDBContext.UserFriends'  is null.");
           }
+            string status = "Pending";
+            userFriend.FriendStatus = status;
             _context.UserFriends.Add(userFriend);
             await _context.SaveChangesAsync();
 
