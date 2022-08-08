@@ -211,13 +211,12 @@ namespace SocialMediaWebAPI.Controllers
 
         // POST: api/Users
         [HttpPost("{userEmail}")]
-        public async Task<ActionResult<User>> PostUser(string userEmail, string UserName, string password, string mobilePhone)
+        public async Task<ActionResult<User>> PostUser(string userEmail, string UserName, string password)
         {
             User newUser = new User();
             newUser.Email = userEmail;
             newUser.UserName = UserName;
-            newUser.Password = password;
-            newUser.MobilePhone = mobilePhone;
+            newUser.Password = password;            
             newUser.RegisteredAt = DateTime.Now;           
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
